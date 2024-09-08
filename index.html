@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Junge' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Recursive' rel='stylesheet'>
+    <title>Favicon Grabber</title>
+</head>
+    <body>
+        <div class="card">
+            <div class="banner">
+                <h2>Favicon Grabber</h2>
+            </div>
+            <div class="wrapper">
+                <div class="url">
+                    <input type="text" placeholder="Enter URL" id="urltext">
+                    <p class="log"></p>
+                </div>
+                <select id="size">
+                    <option value="default">Default Size</option>
+                    <option value="16">16x16</option>
+                    <option value="32">32x32</option>
+                    <option value="48">48x48</option>
+                    <option value="64">64x64</option>
+                    <option value="128">128x128</option>
+                </select>
+                <div class="buttons">
+                    <button onClick="">
+                        <img src="./assets/clipboard-list-svgrepo-com.svg" alt="arrow-down">
+                    </button>
+                    <button onClick="startIT()">
+                        <img src="./assets/cursor-hand-grab-svgrepo-com.svg" alt="arrow-down">
+                    </button>
+                    <button onClick="">
+                        <img src="./assets/arrow-down-svgrepo-com.svg" alt="arrow-down">
+                    </button>
+                </div>
+            </div>
+            <div class="icon">
+                <img id="img" src="#" alt="favicon.png">
+            </div>
+        </div>  
+    </body>
+    <p id="footer">Designed by <span>Mr. Ryt</span></p>
+    <script type="text/javascript" src="script.js"></script>
+</html>
