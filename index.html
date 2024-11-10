@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"  type="image/svg" sizes="32x32" href="assets/cursor-hand-grab-svgrepo-com.svg">
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Junge' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Recursive' rel='stylesheet'>
@@ -28,14 +29,23 @@
                     <option value="128">128x128</option>
                 </select>
                 <div class="buttons">
-                    <button onClick="">
+                    <button onClick="pasteURL()">
                         <img src="./assets/clipboard-list-svgrepo-com.svg" alt="arrow-down">
+                        <div class="tooltip">
+                            Paste URL
+                        </div>
                     </button>
                     <button onClick="startIT()">
                         <img src="./assets/cursor-hand-grab-svgrepo-com.svg" alt="arrow-down">
+                        <div class="tooltip">
+                            Grab favicon
+                        </div>
                     </button>
-                    <button onClick="">
+                    <button onClick="downloadFavicon()">
                         <img src="./assets/arrow-down-svgrepo-com.svg" alt="arrow-down">
+                        <div class="tooltip">
+                            Download favicon
+                        </div>
                     </button>
                 </div>
             </div>

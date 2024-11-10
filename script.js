@@ -7,7 +7,6 @@ function startIT() {
   const card = document.querySelector(".card");
   const url = document.getElementById("urltext");
   const log = document.querySelector(".log");
-  const button = document.querySelector("button");
 
   if (url.value == "") {
     handleError(log, "Enter a URL");
@@ -56,6 +55,35 @@ function grabFAV() {
       break;
   }
 }
+
+// Paste func
+async function pasteURL() {
+  const input = document.querySelector('.url input');
+  const text = await navigator.clipboard.readText();
+  input.value = text;
+}
+
+// download func
+// function downloadFavicon() {
+//   const downloadBtn = document.querySelectorAll('.buttons button');
+//   const faviconURL = document.getElementById('img');
+
+//   // var json = JSON.stringify(data);
+//   // var blob = new Blob([json], { type: "image/png" });
+//   // var url = URL.createObjectURL(blob);
+//   // var link = document.createElement('a');
+//   // link.setAttribute('download', filename);
+//   // link.href = url;
+//   // document.body.appendChild(link);
+//   // link.click();
+//   // document.body.removeChild(link);
+//   // URL.revokeObjectURL(url);
+//   var url = faviconURL.src;
+//   downloadBtn[2].setAttribute('href', faviconURL.src);
+//   downloadBtn[2].setAttribute('download', "favicon");
+//   url.click;
+//   // window.open(faviconURL.src);
+// }
 
 function handleError(target, log) {
   target.innerText = log;

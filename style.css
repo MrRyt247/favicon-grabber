@@ -39,6 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    row-gap: 2px;
     padding: 2rem;
     background-color: var(--white);
     box-shadow: var(--cardShadow);
@@ -131,7 +132,6 @@ input:focus, select:focus {
 }
 
 .buttons {
-    /* width: 100%; */
     display: inline-flex;
     justify-content: space-around;
     column-gap: 4px;
@@ -152,10 +152,16 @@ button {
     cursor: pointer;
     -webkit-user-select: none;
     user-select: none;
+    transition: all 2s forwards;
 }
 
 .buttons > button > img {
     width: 30px;
+
+}
+
+.buttons > button:first-child > img {
+    width: 24px;
 }
 
 .icon {
@@ -164,6 +170,30 @@ button {
     justify-content: center;
     align-items: center;
 }
+
+.tooltip {
+    position: absolute;
+    top: 2.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3rem;
+    padding: .15rem;
+    font-size: .69rem;
+    z-index: 1;
+    background-color: var(--white);
+    color: black;
+    border: solid 1px var(--primary);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 800ms ease-out;
+    transition-delay: 1.2s;
+}
+
+.buttons > button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 #footer {
     margin-block: 0;
